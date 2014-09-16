@@ -44,20 +44,6 @@ while enter == ("yes"): #main loop
     if choice == ("c"):
         print("I do not wish to talk right now, please leave me alone.")
 
-#        if "sword" in inventory:
-#            print("I see you have a sharp shortsword.å Use it well.")
-#
-#        if "healing potion" in inventory:
-#            print("You will live to fight another day.")
-#
-#        if "armour" in inventory:
-#            print("Well equipped, are you?")
-#
-#        if "ring" in inventory:
-#            print("I see you have a ring, eh? Be careful with it!")
-#        if "animal pelt" in inventory:
-#            print("Poor animal you skinned.")
-
 else:
     print("Okay, come back soon!")
 
