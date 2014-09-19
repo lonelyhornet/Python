@@ -1,6 +1,6 @@
 #__author__ = 'Lonelyhornet'
 #Character Creation program
-#Player has 30 points to spend on 4 attributes: strength, health, wisdom, dexterity
+#Player has 5 points to spend on 4 attributes: strength, health, wisdom, dexterity
 #able to spend points on attributes, and take points from them.
 
 points = 5
@@ -11,9 +11,8 @@ WISDOM = 0
 HEALTH = 0
 attributes = ["STRENGTH", "DEXTERITY", "WISDOM", "HEALTH"]
 attr_list = [STRENGTH, DEXTERITY, WISDOM, HEALTH]
-ENTER = "YES"
 
-while ENTER == "YES":
+while 1 > 0:
     CHOICE = input("\nWhat would you like to do? \na. Spend points on attributes. \nb. See attribute amounts"
                    "\nc. Take points from an attribute back into the pool.\n" ).upper()
 
