@@ -1,67 +1,100 @@
-#__author__ = 'Lonelyhornet'
+#__author__ = 'lonelyhornet'
 #Character Creation program
-#Player has 5 points to spend on 4 attributes: strength, health, wisdom, dexterity
+#Player has 5 points to spend on 6 attributes.
 #able to spend points on attributes, and take points from them.
 
 points = 5
+HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY = 0, 0, 0, 0, 0, 0
+attr_num = [HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY]
+attr_string = ["HEALTH", "STAMINA", "ALIGNMENT", "AGILITY", "STRENGTH", "DEXTERITY"]
 
-STRENGTH = 0
-DEXTERITY = 0
-WISDOM = 0
-HEALTH = 0
-attributes = ["STRENGTH", "DEXTERITY", "WISDOM", "HEALTH"]
-attr_list = [STRENGTH, DEXTERITY, WISDOM, HEALTH]
 
-while 1 > 0:
-    CHOICE = input("\nWhat would you like to do? \na. Spend points on attributes. \nb. See attribute amounts"
-                   "\nc. Take points from an attribute back into the pool.\n" ).upper()
+
+while True:
+    print("\nWhat would you like to do? \na. Spend points on attributes. \nb. See attribute amounts"
+                   "\nc. Take points from an attribute back into the pool.\n" )
+    CHOICE = input().upper()
 
     if CHOICE == "A":
-        TEMP_CHOSEN = input("What attribute would you like to invest in?: ").upper()
+        print("What attribute would you like to invest in?: ")
+        TEMP_CHOSEN = input().upper()
 
-        if TEMP_CHOSEN == "STRENGTH":
-            STRENGTH += 1
+        if TEMP_CHOSEN == attr_string[0]: #health
+            attr_num[0] += 1
             points -= 1
+            print("HEALTH: ", attr_num[0])
 
-        if TEMP_CHOSEN == "DEXTERITY":
-            DEXTERITY += 1
+        if TEMP_CHOSEN == attr_string[1]: #stamina
+            attr_num[1] += 1
             points -= 1
+            print("STAMINA: ", attr_num[1])
 
-        if TEMP_CHOSEN == "WISDOM":
-            WISDOM += 1
+        if TEMP_CHOSEN == attr_string[2]: #alignment
+            attr_num[2] += 1
             points -= 1
+            print("ALIGNMENT: ", attr_num[2])
 
-        if TEMP_CHOSEN == "HEALTH":
-            HEALTH += 1
+        if TEMP_CHOSEN == attr_string[3]: #agility
+            attr_num[3] += 1
             points -= 1
+            print("AGILITY: ", attr_num[3])
+
+        if TEMP_CHOSEN == attr_string[4]: #strength
+            attr_num[4] += 1
+            points -= 1
+            print("STRENGTH: ", attr_num[4])
+
+        if TEMP_CHOSEN == attr_string[5]: #dexterity
+            attr_num[5] += 1
+            points -= 1
+            print("DEXTERITY: ", attr_num[5])
+
+
 
     if CHOICE == "B":
         print("Current Attributes / Points:"
               "\nPOINTS: ", points,
-              "\nSTRENGTH: ", STRENGTH,
-              "\nDEXTERITY: ", DEXTERITY,
-              "\nWISDOM: ", WISDOM,
-              "\nHEALTH: ", HEALTH,
-              "")
+              "\nHEALTH: ", attr_num[0],
+              "\nSTAMINA: ", attr_num[1],
+              "\nALIGNMENT: ", attr_num[2],
+              "\nAGILITY: ", attr_num[3],
+              "\nSTRENGTH: ", attr_num[4],
+              "\nDEXTERITY: ", attr_num[5],)
+
 
     if CHOICE == "C":
-        ATTR_REM = input("What attribute do you want to take points out of?: ").upper()
+        print("What attribute do you want to take points out of?: ")
+        ATTR_REM = input().upper()
 
-        if ATTR_REM == "STRENGTH" and STRENGTH > 0:
-            STRENGTH -= 1
+        if ATTR_REM == attr_string[0] and attr_num[0] > 0: #health
+            attr_num[0] -= 1
             points += 1
+            print("HEALTH: ", attr_num[0])
 
-        if ATTR_REM == "DEXTERITY" and DEXTERITY > 0:
-            DEXTERITY -= 1
+        if ATTR_REM == attr_string[1] and attr_num[1] > 0: #stamina
+            attr_num[1] -= 1
             points += 1
+            print("STAMINA: ", attr_num[1])
 
-        if ATTR_REM == "WISDOM" and WISDOM > 0:
-            WISDOM -= 1
+        if ATTR_REM == attr_string[2] and attr_num[2] > 0: #alignment
+            attr_num[2] -= 1
             points += 1
+            print("ALIGNMENT: ", attr_num[2])
 
-        if ATTR_REM == "HEALTH" and HEALTH > 0:
-            HEALTH -= 1
+        if ATTR_REM == attr_string[3] and attr_num[3] > 0: #agility
+            attr_num[3] -= 1
             points += 1
+            print("AGILITY: ", attr_num[3])
+
+        if ATTR_REM == attr_string[4] and attr_num[4] > 0: #strength
+            attr_num[4] -= 1
+            points += 1
+            print("STRENGTH: ", attr_num[4])
+
+        if ATTR_REM == attr_string[5] and attr_num[5] > 0: #dexterity
+            attr_num[5] -= 1
+            points += 1
+            print("DEXTERITY: ", attr_num[5])
 
         else:
             print("\nThat attribute has no points invested in it yet.")
