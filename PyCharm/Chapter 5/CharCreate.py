@@ -3,48 +3,49 @@
 #Player has 5 points to spend on 6 attributes.
 #able to spend points on attributes, and take points from them.
 
+
+
 points = 5
 HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY = 0, 0, 0, 0, 0, 0
 attr_num = [HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY]
-attr_string = ["HEALTH", "STAMINA", "ALIGNMENT", "AGILITY", "STRENGTH", "DEXTERITY"]
-
+attr_string = ['HEALTH', "STAMINA", "ALIGNMENT", "AGILITY", "STRENGTH", "DEXTERITY"]
 
 
 while True:
-    print("\nWhat would you like to do? \na. Spend points on attributes. \nb. See attribute amounts"
-                   "\nc. Take points from an attribute back into the pool.\n" )
+    print('\nWhat would you like to do? \na. Spend points on attributes. \nb. See attribute amounts'
+          '\nc. Take points from an attribute back into the pool.\n')
     CHOICE = input().upper()
 
     if CHOICE == "A":
-        print("What attribute would you like to invest in?: ")
-        TEMP_CHOSEN = input().upper()
+        print('What attribute would you like to invest in?: ')
+        CHOSEN = input().upper()
 
-        if TEMP_CHOSEN == attr_string[0]: #health
+        if CHOSEN == attr_string[0]: #health
             attr_num[0] += 1
             points -= 1
-            print("HEALTH: ", attr_num[0])
+            print('HEALTH: ', attr_num[0])
 
-        if TEMP_CHOSEN == attr_string[1]: #stamina
+        if CHOSEN == attr_string[1]: #stamina
             attr_num[1] += 1
             points -= 1
-            print("STAMINA: ", attr_num[1])
+            print('STAMINA: ', attr_num[1])
 
-        if TEMP_CHOSEN == attr_string[2]: #alignment
+        if CHOSEN == attr_string[2]: #alignment
             attr_num[2] += 1
             points -= 1
             print("ALIGNMENT: ", attr_num[2])
 
-        if TEMP_CHOSEN == attr_string[3]: #agility
+        if CHOSEN == attr_string[3]: #agility
             attr_num[3] += 1
             points -= 1
             print("AGILITY: ", attr_num[3])
 
-        if TEMP_CHOSEN == attr_string[4]: #strength
+        if CHOSEN == attr_string[4]: #strength
             attr_num[4] += 1
             points -= 1
             print("STRENGTH: ", attr_num[4])
 
-        if TEMP_CHOSEN == attr_string[5]: #dexterity
+        if CHOSEN == attr_string[5]: #dexterity
             attr_num[5] += 1
             points -= 1
             print("DEXTERITY: ", attr_num[5])
@@ -98,6 +99,7 @@ while True:
 
         else:
             print("\nThat attribute has no points invested in it yet.")
+
 
     if points == 0:
         print("You have no more points left.")
