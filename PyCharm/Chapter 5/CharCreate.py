@@ -1,10 +1,3 @@
-#__author__ = 'lonelyhornet'
-#Character Creation program
-#Player has 5 points to spend on 6 attributes.
-#able to spend points on attributes, and take points from them.
-
-
-
 points = 5
 HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY = 0, 0, 0, 0, 0, 0
 attr_num = [HEALTH, STAMINA, ALIGNMENT, AGILITY, STRENGTH, DEXTERITY]
